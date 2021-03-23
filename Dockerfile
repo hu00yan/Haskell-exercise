@@ -1,4 +1,4 @@
-FROM ubuntu/latest
+FROM ubuntu:21.04
 
 # Install custom tools, runtime, etc.
 RUN sudo apt-get update \
