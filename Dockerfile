@@ -1,4 +1,4 @@
-FROM ubuntu:21.04
+FROM haskell:latest
 
 # Install custom tools, runtime, etc.
 RUN apt-get update \
@@ -11,7 +11,5 @@ RUN apt-get update \
     && sudo rm -rf /var/lib/apt/lists/* \
 
 USER gitpod
-RUN apt-get update
-RUN curl -sSL https://get.haskellstack.org/ | sh \
- && stack setup && stack install hlint hpack ghcid
+RUN stack install hlint hpack ghcid
 USER root
