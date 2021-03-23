@@ -1,4 +1,4 @@
-FROM ubuntu/focal
+FROM ubuntu/latest
 
 # Install custom tools, runtime, etc.
 RUN sudo apt-get update \
