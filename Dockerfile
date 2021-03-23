@@ -1,8 +1,9 @@
 FROM ubuntu:21.04
 
 # Install custom tools, runtime, etc.
-RUN sudo apt-get update \
-    && sudo apt-get install -y \
+RUN apt-get update \
+    && apt-get install -y \
+        sudo \
         fzf  \
         ripgrep \ 
         threadscope \
